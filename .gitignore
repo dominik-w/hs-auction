@@ -117,3 +117,6 @@ dist
 
 # Data
 db/
+
+# Webstorm
+.idea/
