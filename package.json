@@ -1,0 +1,34 @@
+{
+  "name": "hs-auction",
+  "version": "1.0.1",
+  "description": "A simplified P2P auction solution based on Hyperswarm RPC and Hypercores",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "lint": "./node_modules/.bin/eslint --ext .js ./src/",
+    "lint:fix": "./node_modules/.bin/eslint --fix --ext .js ./src/",
+    "dht:start": "hyperdht --bootstrap --host 127.0.0.1 --port 30001",
+    "serve": "node ./src/server.js",
+    "auction:open": "node ./src/auction-open.js",
+    "auction:bid": "node ./src/auction-bid.js",
+    "auction:close": "node ./src/auction-close.js"
+  },
+  "keywords": [
+    "auction"
+  ],
+  "author": "Dominik Wlazlowski",
+  "license": "ISC",
+  "dependencies": {
+    "@hyperswarm/rpc": "^3.3.2",
+    "b4a": "^1.6.6",
+    "hyperbee": "^2.18.2",
+    "hypercore": "^10.33.4",
+    "hyperdht": "^6.13.1",
+    "hyperswarm": "^4.7.14"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  }
+}
